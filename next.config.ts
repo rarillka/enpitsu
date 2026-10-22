@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   },
   cacheComponents: true,
   partialPrefetching: true,
+
   turbopack: {
     rules: {
       "*.css": {
@@ -15,6 +16,7 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  allowedDevOrigins: ['198.18.0.1'],
 };
 
 export default nextConfig;

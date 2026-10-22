@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+.bg-1,
+.bg-1-imgg {
+  background-color: #776453;
+}
+
+.bg-1-imgg {
+  background-image: url("/img/bg-images/white-paper-texture.png"), url("/img/bg-images/pale-stained-concrete-wall.png");
+  background-blend-mode: multiply;
+}
+
+
+
+@theme {
+  --breakpoint-3xl: 1920px; 
+  --font-montserrat: var(--font-montserrat), sans-serif;
+  --font-sjz: var(--font-sjz), sans-serif;
+}

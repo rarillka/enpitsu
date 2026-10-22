@@ -1,16 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Montserrat } from "next/font/google";
+import "./styles/globals.css";
+import Header from "@/components/header/Header"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import localFont from 'next/font/local'
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const sjz = localFont({
+  src: '../public/fonts/Sjz/Sjz.otf',
+   variable: '--font-sjz',
+})
+
+const montserrat = Montserrat({
+   subsets: ['latin', 'cyrillic'],
+  variable: "--font-montserrat"
+})
+
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
+
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,11 +32,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html className={`${montserrat.variable} ${sjz.variable}`}>
+      <head>
+        <meta name="apple-mobile-web-app-title" content="enpitsu" />
+      </head>
+      <body className='bg-1-imgg overflow-x-hidden'> <Header /> {children}</body>
     </html>
   );
 }
