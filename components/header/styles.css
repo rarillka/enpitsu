@@ -35,7 +35,6 @@
 
 .header-link-text {
   color: #ffffff;
-  font-size: 28px;
   z-index: 2;
   text-shadow:
     -1px -1px 0 #2f2019,
@@ -51,8 +50,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   max-width: none;
   object-fit: contain;
 

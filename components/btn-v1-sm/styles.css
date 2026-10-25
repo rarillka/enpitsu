@@ -1,0 +1,23 @@
+.btn-v1-sm {
+  font-size: 21px;
+
+  padding-left: 0.8em;
+  color: #ffffff;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 2.5px #2f2019;
+  background-image: url("/img/bg-images/Btn-v1-sm-bg.png");
+  background-size: 65px;
+  width: 75px;
+  button {
+    transform: translateY(-2px);
+  }
+
+  background-repeat: no-repeat;
+  &:hover {
+    background-image: url("/img/bg-images/Btn-v1-sm-bg-hover.png");
+    button{
+            filter: drop-shadow(0px 1px rgba(47, 32, 25, 54));
+
+    }
+}
+}
