@@ -169,7 +169,7 @@ export default function Header() {
                 </div>
               </ul>
               <div className="mt-4 mr-[-1.5em]">
-                <Btn_v1_sm btn_text={"МЕРЧ"} />
+                <Btn_v1_sm btn_text={"МЕРЧ"}/>
               </div>
             </div>
           </div>

@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./styles/globals.css";
-import Header from "@/components/header/Header"
+import Header from "@/components/header/Header";
 
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 
 const sjz = localFont({
-  src: '../public/fonts/Sjz/Sjz.otf',
-   variable: '--font-sjz',
-})
+  src: "../public/fonts/Sjz/Sjz.otf",
+  variable: "--font-sjz",
+});
 
 const montserrat = Montserrat({
-   subsets: ['latin', 'cyrillic'],
-  variable: "--font-montserrat"
-})
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-montserrat",
+  weight: ["100", "300", "400"],
+  style: ["italic", "normal"],
+});
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -36,7 +38,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <meta name="apple-mobile-web-app-title" content="enpitsu" />
       </head>
-      <body className='bg-1-imgg overflow-x-hidden'> <Header /> {children}</body>
+      <body className="bg-1-imgg overflow-x-hidden">
+        {" "}
+        <Header /> {children}
+      </body>
     </html>
   );
 }
